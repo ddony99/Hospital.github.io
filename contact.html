@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DonyHospital</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="js/script.js">
+    </head>
+    <body>
+       <dialog>
+        <h2>With</h2>
+        <footer>
+            <button id="closeBtn">Close</button>
+        </footer>
+       </dialog>
+       <button id="openBtn">open Model</button>
+
+       <script>
+            const dialog = document.querySelector('dialog');
+            const openBtn = document.querySelector('#openBtn');
+            const closeBtn = document.querySelector('#closeBtn');
+            openBtn.addEventListener('click', () => dialog.showModal());
+            closeBtn.addEventListener('click', () => dialog.close());
+       </script>
+    </body>
+</html>

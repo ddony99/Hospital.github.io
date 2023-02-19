@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dony Hospital | Haiti Health</title>
+        <link rel="stylesheet" href="Style/index.css">
+        <!--Boostrap CSS-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+    </head>
+    <body>
+      <div class="container">
+      <!--navbar-->      
+            <nav id="nav" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">Dony Hospital | Haiti Health</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#" >About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Location</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Services
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#" id="openBtn" data-toggle="modal" data-target="#exampleModal">Login</a> 
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class=" form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="  bi-search btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                 
+                </div>
+            </nav>
+
+      <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="px-4 py-3">
+                        <div class="form-group">
+                          <label for="exampleDropdownFormEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleDropdownFormPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                            <label class="form-check-label" for="dropdownCheck"> Remember me</label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign in</button>      
+                        <div class="dropdown-divider"> </div>
+                        <a class="dropdown-item" id="signUp" data-toggle="modal" data-target="#signupModal" href="#sign">New around here? Sign up</a>
+                        <a class="dropdown-item" id="forgetPass" data-toggle="modal" data-target="#forgetPasswordModal"  >Forgot password?</a><br>
+                      
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        <!-- SignUp Modal-->
+              <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="px-4 py-3">
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault01">First name</label>
+                            <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault02">Last name</label>
+                            <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Username</label>
+                            <input type="text" class="form-control" id="validationDefault03" placeholder="@Doe00" required>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Password</label>
+                            <input type="password" class="form-control" id="validationDefault03" placeholder="****" required>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Confirm Password</label>
+                            <input type="password" class="form-control" id="validationDefault03" placeholder="****" required>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                              Agree to terms and conditions
+                            </label>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        <!-- ForgotPasswor Modal-->
+               <div class="modal fade" id="forgetPasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Reset Password</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>                    
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Username</label>
+                            <input type="text" class="form-control" id="validationDefault03" placeholder="@Doe00" required>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Gmail</label>
+                            <input type="gmail" class="form-control" id="validationDefault03" placeholder="@gmail.com" required>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Password</label>
+                            <input type="password" class="form-control" id="validationDefault03" placeholder="****" required>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationDefault03">Confirm Password</label>
+                            <input type="password" class="form-control" id="validationDefault03" placeholder="****" required>
+                          </div>
+                        </div>
+                       
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                            <label class="form-check-label" for="invalidCheck2">
+                              Agree to terms and conditions
+                            </label>
+                          </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Submit form</button><br>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                    <div class=""> </div>
+                  </div>
+                </div>
+              </div>
+
+        
+       <!--Courassel-->
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" style=" margin: auto;padding-top: 15px; padding-bottom:5px;">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/36193443.jpg" class="d-block w-100" alt="...">
+                  
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </button>
+            </div>
+      
+       
+              <!--Action Login JS-->
+              <!-- 
+              <dialog>
+                <h2>Login</h2>
+                  <form class="px-4 py-3">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck"> Remember me</label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                    <button id="closeBtn" class="btn btn-danger">Close</button>
+                  
+                  <div class="dropdown-divider"> </div>
+                  <a class="dropdown-item" id="signUp" href="#sign">New around here? Sign up</a>
+                  <a class="dropdown-item" id="forgetPass" >Forgot password?</a><br>
+                
+                </form>
+              </dialog>
+              <dialog id="sign">
+              <form>
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                      <label for="validationDefault01">First name</label>
+                      <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="validationDefault02">Last name</label>
+                      <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                      <label for="validationDefault03">Username</label>
+                      <input type="text" class="form-control" id="validationDefault03" placeholder="@Doe00" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                      <label class="form-check-label" for="invalidCheck2">
+                        Agree to terms and conditions
+                      </label>
+                    </div>
+                  </div>
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                  <button id="closeSignUp" class="btn btn-danger ">Close</button>
+                </form>
+              
+              </dialog>
+              <dialog id="pass">
+                <form>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">First name</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Last name</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-6 mb-3">
+                        <label for="validationDefault03">Username</label>
+                        <input type="text" class="form-control" id="validationDefault03" required>
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label for="validationDefault03">New Password</label>
+                        <input type="password" class="form-control" id="validationDefault03" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                          Agree to terms and conditions
+                        </label>
+                      </div>
+                    </div>
+                    <button class="btn btn-success" type="submit">Submit form</button>
+                    <button id="closeforgetPass" class="btn btn-danger ">Close</button>
+                  </form>
+                
+                </dialog>
+                -->
+                
+                  <!--About-->
+               <div class="row" style="padding-bottom: 25px; padding-top: 25px;">
+                <div class="col-sm-6">
+                    <div class="card-body ">
+                      <h2 class="card-title">About the University Hospital Haiti Health</h2>
+                      
+                      <p class="card-text">About University Hospital Haiti Health University Hospital is an acute care facility serving as the major referral center for southwest Alabama, southeast Mississippi and portions of northwest Florida. We offer centers for Level I trauma, burn, stroke, cardiovascular disease and sickle cell disease. As a teaching and research facility for the University of South Alabama College of Medicine, University Hospital plays a key role in the development of new technology, treatments and training of future healthcare professionals. The hospital also includes outpatient care services such as cardiology, medicine and surgery. 
+                        University Hospital is a member of the American Hospital Association.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                  </div>
+               
+                <div class="col-sm-6">
+                  <div class="card-body">
+                      <img class="card-text  w-100"src="img/39107993.jpg"   alt="">
+                    </div>
+                </div>
+              </div>
+              <!--Services-->
+              <div class="h2-center">
+                <h2>Services Offered at University Hospital Haiti Health</h2>
+              </div>
+              <div class="row row-cols-1 row-cols-md-3" id="main-1">
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Adult Infectious Disease</h5>
+                      <p class="card-text">Our infectious disease specialists treat patients with various disorders caused by germs. Infectious diseases include measles and chickenpox—which can be prevented by vaccines—meningitis, Lyme disease, malaria, E.coli and HIV/AIDS.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                  
+                    <div class="card-body">
+                      <h5 class="card-title">Adult Intensive Care</h5>
+                      <p class="card-text">The intensive care unit (ICU) is, in some ways, an extensive of the Fanny Meisler Trauma Center. Once a trauma patients immediate needs have been addressed and their health is stabilized, they can be transferred to our adult ICU for further critical care.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                    
+                    <div class="card-body">
+                      <h5 class="card-title">Capsule Endoscopy</h5>
+                      <p class="card-text">With this minimally invasive technology—also known as camera in a pill—doctors examine and diagnose disorders of the gastrointestinal tract without using sedation.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Bariatric Surgery</h5>
+                      <p class="card-text">Bariatric surgery, also known as weight-loss surgery, includes a variety of procedures to help patients lose weight and improve their overall health.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Burn Surgery</h5>
+                      <p class="card-text">HAITI Health surgeons provide multiple options for repairing third-degree burns, including artificial skin.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Cardio-Oncology</h5>
+                      <p class="card-text">With this program, our cardiology team help patients undergoing cancer treatment to manage medications that can affect the heart.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Cardiology Outpatient Testing</h5>
+                      <p class="card-text">At our outpatient testing facility, patients undergo stress tests, cardiac monitoring, Doppler testing to measure blood flow through arteries and veins, and other diagnostic procedures.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Colonoscopy</h5>
+                      <p class="card-text">Colonoscopy is a procedure to search the colon and rectum for possible growths or other irregularities.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border-0">
+                   
+                    <div class="card-body">
+                      <h5 class="card-title">Colorectal Surgery</h5>
+                      <p class="card-text">Focuses on using surgical procedures to treat diseases of the adrenal gland, thyroid and parathyroi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- hh-->
+             
+               <div class="row">
+                <div class="col-sm-6">
+                    <div class="card-body ">
+                      <h2 class="card-title">HAITI Regional Stroke Center</h2>
+                      <p class="card-text">The staff and response team on call at the USA Regional Stroke Center is the reason why this facility has continued to receive the highest level of achievement every year since 2008 the Gold Plus Target Stroke Honor Role Elite Plus Performance Quality Achievement Award. Our board-certified neurologists, clinicians and emergency team work collaboratively to deliver exceptional, evidence-based care in order to improve the outcomes and quality of life of stroke patients. Learn more about our Stroke Care services below. has continued to receive the highest level of achievement every year since 2008 the Gold Plus Target Stroke Honor Role Elite Plus Performance Quality Achievement Award. Our board-certified neurologists, clinicians and emergency team work collaboratively to deliver exceptional, evidence-based care in order to improve the outcomes and quality of life of stroke patients. Learn more about our Stroke Care services below.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                  </div>
+               
+                <div class="col-sm-6">
+                  <div class="card-body">
+                      <img class="card-text w-100"src="img/41490646.jpg"   alt="">
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card-body">
+                      <img class="card-text w-100"src="img/39115249.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card-body ">
+                      <h2 class="card-title">Arnold Luterman Regional Burn Center</h2>
+                      <p class="card-text">Arnold Luterman Regional Burn Center is the only facility in the region providing burn care to patients from the time of their injury to recovery. The burn team is comprised of physicians specializing in burn surgery, infectious disease, plastic surgery, trauma surgery, orthopaedic surgery, psychiatry and anesthesiology. Our Burn Center research team is nationally and internationally recognized, particularly in the development of artificial skin. Team members contribute to hundreds of medical publications, making significant contributions in virtually every aspect of burn care. Learn more about our Burn Care services below.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                    <div class="card-body ">
+                      <h2 class="card-title">Fanny Meisler Trauma Center</h2>
+                      <p class="card-text">The Fanny Meisler Trauma Center at USA Health is the only Level I trauma center (prevention through recovery with advanced surgical care) in southwest Alabama, indicating the highest level of care a facility can provide. We believe that the highest level of care is the only level of care anyone would expect to receive in a life-threatening situation. No matter what day a patient arrives, we have a board-certified trauma surgeon in-house 24 hours a day. Every trauma patient who is brought in is assigned a designated trauma team composed of a trauma surgeon, emergency physician, surgical residents, trauma nurse coordinator, emergency department nurses, radiologic technologist, respiratory therapists, and an anesthesiologist or nurse anesthetist. Learn more about our Trauma services below.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                  </div>
+                <div class="col-sm-6">
+                  <div class="card-body">
+                      <img class="card-text w-100"src="img/43695595.jpg"   alt="">
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card-body">
+                      <img class="card-text w-100 margin-top:20px;"src="img/35858721.jpg"   alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6" style="margin-bottom: 15px;">
+                    <div class="card-body ">
+                      <h2 class="card-title">Adress Location</h2>
+                      <p class="card-text">The Fanny Meisler Trauma Center at USA Health is the only Level I trauma center (prevention through recovery with advanced surgical care) in southwest Alabama, indicating the highest level of care a facility can provide. We believe that the highest level of care is the only level of care anyone would expect to receive in a life-threatening situation. No matter what day a patient arrives, we have a board-certified trauma surgeon in-house 24 hours a day. Every trauma patient who is brought in is assigned a designated trauma team composed of a trauma surgeon, emergency physician, surgical residents, trauma nurse coordinator, emergency department nurses, radiologic technologist, respiratory therapists, and an anesthesiologist or nurse anesthetist. Learn more about our Trauma services below.</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                  </div>   
+              </div>
+    
+      </div>
+
+
+      <!-- Footer -->
+      <footer class="text-center text-lg-start bg-light text-muted">
+        <!-- Section: Social media -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+
+          <!-- Right -->
+          <div>
+              <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
+              <a href="" class="me-4 text-reset"><i class="fab fa-twitter"></i></a>
+              <a href="" class="me-4 text-reset"><i class="fab fa-google"></i> </a>
+              <a href="" class="me-4 text-reset"><i class="fab fa-instagram"></i> </a>
+              <a href="" class="me-4 text-reset"> <i class="fab fa-linkedin"></i> </a>
+              <a href="" class="me-4 text-reset"><i class="fab fa-github"></i></a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                  <!-- Content -->
+                  <h6 class="text-uppercase fw-bold mb-4">
+                    <i class="fas fa-gem me-3"></i>Dony Hospital | Haiti Health
+                  </h6>
+                  <p> Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Products
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Angular</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">React</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Vue</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Laravel</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Useful links
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Pricing</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Settings</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  info@example.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4 bg-dark" style="color: white;" >
+          © 2022 Copyright:
+          <a class="text-reset" >Donatien Dony </a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    
+            <!-- 
+             
+        <footer id="main-footer" class="bg-dark">
+            <h6>Copryright &copy; Donatien Dony Luckner</h6>
+        </footer> -->
+    
+
+
+        <!--Boostrap JS-->
+        <script src="js/jquery-3.6.1.min.js"></script>
+        <script src="js/script.js"></script>
+        <script  type="text/javascript" src="js/bootstrap.min.js"></script>
+    </body>
+</html>
